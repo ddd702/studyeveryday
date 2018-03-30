@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import "base/base";
+@import "d.utils";
+body {
+    font: $b-font-weight #{$b-font-size}/#{$b-line-height} $b-font-family;
+    color: $c-text;
+    a {
+        text-decoration: none;
+        color: nth($c-link, 1);
+        &:hover {
+            text-decoration: underline;
+            color: nth($c-link, 2);
+        }
+    }
+    &.no-login {
+        background-image: url(../assets/img/live_bg.jpg);
+        background-size: 100% 100%;
+        .loginreg-box {
+            background: transparent;
+        }
+    }
+}
+
+.lesson-box {
+    padding: toRem(10px);
+    h3 {
+        font-weight: bold;
+        font-size: toRem(20px);
+    }
+    h4 {
+        font-weight: bold;
+        font-size: toRem(13px);
+    }
+    .list {
+        li {
+            padding: toRem(5px);
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
